@@ -1,0 +1,267 @@
+            /*  3. Banner CSS
+/*----------------------------------------*/
+            
+            .hero-bannner {
+                position: relative;
+                overflow: hidden;
+                background-color: rgba(248, 246, 251, 0.55);
+                z-index: 1;
+            }
+            
+            .cliping-mask {
+                -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+            }
+            
+            .hero-inner-wrraper {
+                padding: 150px 0 150px;
+                margin-top: -1px;
+                z-index: 1;
+                @media #{$xs-layout, $md-layout} {
+                    padding-bottom: 200px;
+                }
+
+                img{
+                    @media #{$xss-layout} {
+                        padding:30px 0;
+                    }
+                }
+            }
+            
+            .info-header {
+                min-height: 100%;
+            }
+            
+            @keyframes iconAnimationOne {
+                0% {
+                    transform: translate(0px, 0px) rotate(0deg);
+                }
+                20% {
+                    transform: translate(73px, -1px) rotate(36deg);
+                }
+                40% {
+                    transform: translate(141px, 72px) rotate(72deg);
+                }
+                60% {
+                    transform: translate(83px, 122px) rotate(108deg);
+                }
+                80% {
+                    transform: translate(-40px, 72px) rotate(144deg);
+                }
+                100% {
+                    transform: translate(0px, 0px) rotate(0deg);
+                }
+            }
+            
+            @-webkit-keyframes iconAnimationOne {
+                0% {
+                    transform: translate(0px, 0px) rotate(0deg);
+                }
+                20% {
+                    transform: translate(73px, -1px) rotate(36deg);
+                }
+                40% {
+                    transform: translate(141px, 72px) rotate(72deg);
+                }
+                60% {
+                    transform: translate(83px, 122px) rotate(108deg);
+                }
+                80% {
+                    transform: translate(-40px, 72px) rotate(144deg);
+                }
+                100% {
+                    transform: translate(0px, 0px) rotate(0deg);
+                }
+            }
+            
+            @keyframes iconAnimationTwo {
+                0% {
+                    transform: translate(0px, 0px) rotate(0deg);
+                }
+                20% {
+                    transform: translate(200px, -1px) rotate(36deg);
+                }
+                40% {
+                    transform: translate(141px, 200px) rotate(72deg);
+                }
+                60% {
+                    transform: translate(83px, 122px) rotate(108deg);
+                }
+                80% {
+                    transform: translate(-40px, 72px) rotate(144deg);
+                }
+                100% {
+                    transform: translate(0px, 0px) rotate(0deg);
+                }
+            }
+            
+            .icon-shape-2 {
+                position: absolute;
+                right: 300px;
+                top: 200px;
+                width: 20px;
+                height: 20px;
+                animation: iconAnimationOne 13s infinite linear;
+                @media #{$xs-layout} {
+                    top: 50%;
+                }
+            }
+            
+            .icon-shape-1 {
+                position: absolute;
+                left: 100px;
+                top: 100px;
+                animation: iconAnimationOne 13s infinite linear;
+            }
+            
+            .info-header h1 {
+                color: $light-aqua;
+                white-space: nowrap;
+                margin: 0 0 30px 0px;
+                text-transform: capitalize;
+                letter-spacing: 4px;
+                padding-left: 70px;
+                font-size: 50px;
+                text-align: left;
+                font-weight: $semi-bold;
+                line-height: 1.2;
+                position: relative;
+                @media #{$xs-layout, $md-layout} {
+                    letter-spacing: 2px;
+                    padding-left: 0;
+                    font-size: 34px;
+                }
+                &::before {
+                    content: " ";
+                    display: block;
+                    background: $light-aqua;
+                    width: 50px;
+                    height: 6px;
+                    top: 31px;
+                    left: 0;
+                    position: absolute;
+                    @media #{$xs-layout, $md-layout} {
+                        top: -20px;
+                    }
+                }
+                span {
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+            
+            .banner-meta {
+                margin: 0 0 50px;
+                background: $red;
+                margin-left: 70px;
+                padding-left: 25px;
+                display: inline-block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 25px;
+                border-radius: 3px;
+                @media #{$xs-layout, $md-layout} {
+                    margin: 0 0 50px;
+                    width: 100%;
+                }
+                li {
+                    letter-spacing: 2px;
+                    display: inline;
+                    position: relative;
+                    text-transform: capitalize;
+                    font-size: $base-font-size+2;
+                    color: $white;
+                    font-weight: $medium;
+                    line-height: 27px;
+                    @media #{$xs-layout, $md-layout} {
+                        display: block;
+                        font-size: 18px;
+                        &::before,
+                        &:first-of-type::before {
+                            display: none;
+                        }
+                    }
+                    &:first-of-type::before {
+                        top: -1px;
+                        content: " ";
+                        font-size: 11px;
+                        position: relative;
+                        color: currentcolor;
+                        padding: 0 15px 0 0;
+                    }
+                    &::before {
+                        top: -1px;
+                        content: "|";
+                        font-size: 11px;
+                        position: relative;
+                        color: $white;
+                        padding: 0 15px 0 17px;
+                    }
+                }
+            }
+            
+            .banner-btn {
+                padding-left: 70px;
+                @media #{$xs-layout, $md-layout} {
+                    padding-left: 0;
+                }
+                a.btn {
+                    &:hover,
+                    &:focus {
+                        color: $white;
+                    }
+                }
+            }
+            
+            a.down {
+                color: $white;
+                text-transform: uppercase;
+                position: absolute;
+                bottom: -50px;
+                margin-right: auto !important;
+                margin-left: auto !important;
+                text-align: center;
+                left: 0;
+                right: 0;
+                width: 24px;
+                font-size: 12px;
+                letter-spacing: 1px;
+                font-weight: $medium;
+                font-family: $rubik;
+                @media #{$xs-layout, $md-layout} {
+                    bottom: -100px;
+                }
+                .down-one {
+                    display: block;
+                    height: 0px;
+                    margin-bottom: 5px;
+                    width: 1px;
+                    background: $light-aqua;
+                    margin-left: 12px;
+                }
+                .down-two {
+                    text-orientation: mixed;
+                    -ms-writing-mode: tb-lr;
+                    writing-mode: vertical-lr;
+                    white-space: nowrap;
+                    transform: rotate(180deg);
+                }
+                &:hover .down-two {
+                    color: $light-aqua !important;
+                }
+                .down-three {
+                    display: block;
+                    height: 30px;
+                    margin-bottom: 5px;
+                    width: 1px;
+                    background: $white;
+                    margin-left: 12px;
+                }
+                &:hover .down-three {
+                    height: 0px;
+                    background: $light-aqua;
+                }
+                &:hover .down-one {
+                    height: 30px;
+                }
+            }

@@ -1,0 +1,117 @@
+            /* 11. contact CSS
+/*----------------------------------------*/
+            
+            .contact-area {
+                position: relative;
+                overflow: hidden;
+                padding-bottom: 100px;
+                background: #1CD8D2;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to bottom, #93EDC7, #1CD8D2);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to bottom, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                    
+            }
+            
+            .contact-box {
+                transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+                padding: 80px 80px 80px 80px;
+                background: #1CD8D2;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to bottom, #93EDC7, #1CD8D2);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to bottom, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                
+                @media #{$xss-layout} {
+                    padding: 30px;
+                }
+                .btn {
+                    background: #24204f !important;
+                    border: 1px solid #24204f !important;
+                    padding: 13px 25px !important;
+                    color: #fff;
+                    &:hover {
+                        background: transparent !important;
+                        border: 1px solid #fff !important;
+                        color: #fff;
+                    }
+                }
+                .react-datepicker-wrapper {
+                    width: 100%;
+                }
+                .form-control {
+                    background: transparent;
+                    &:focus {
+                        background: transparent;
+                        border: 1px solid #24204f !important;
+                    }
+                }
+                textarea.form-control {
+                    background: transparent;
+                    color: #171337;
+                    &:focus {
+                        background: transparent;
+                    }
+                }
+                .invalid-feedback {
+                    color: #c3352b !important;
+                }
+                .message.valid-feedback {
+                    color: #24204f !important;
+                    font-size: 16px !important;
+                }
+                .message.invalid-feedback {
+                    color: #c3352b !important;
+                    font-size: 16px !important;
+                }
+            }
+            
+            .conatact-info-box {
+                @media #{$xs-layout} {
+                    margin-bottom: 40px;
+                }
+                .conatact-icon {
+                    width: 22px;
+                    height: 32px;
+                    overflow: hidden;
+                    line-height: 24px;
+                    font-size: 24px;
+                    color: rgba(255, 255, 255, 0.85);
+                    text-align: center;
+                    float: left;
+                    margin: 0px 20px 60px 0px;
+                    padding: 0px 0px 0px 0px;
+                    border-radius: 0% 0% 0% 0%;
+                    transition-duration: 0.3s;
+                    display: inline-block;
+                    position: relative;
+                    z-index: 1;
+                }
+                .conatact-title {
+                    font-size: 24px;
+                    font-weight: $regular;
+                    color: #24204f;
+                    margin: 0px 0px 15px 0px;
+                    padding: 0px 0px 0px 0px;
+                    transition-duration: 0.3s;
+                    font-family: $rubik;
+                    text-transform: uppercase;
+                }
+                .conatact-content {
+                    p {
+                        font-size: 16px;
+                        font-family: $rubik;
+                        color: #ffffff;
+                        margin: 0px 0px 0px 0px;
+                        padding: 0px 0px 0px 0px;
+                    }
+                    a {
+                        color: #ffffff;
+                        display: block;
+                        font-size: 16px;
+                        font-family: $rubik;
+                        color: #ffffff;
+                        margin: 0px 0px 0px 0px;
+                        padding: 0px 0px 0px 0px;
+                        &:hover {
+                            color: #24204f;
+                        }
+                    }
+                }
+            }

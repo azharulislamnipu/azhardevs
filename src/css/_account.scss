@@ -1,0 +1,81 @@
+            /*  12. login CSS
+/*----------------------------------------*/
+            
+            .accountbg {
+                background: $bg-gradient;
+                position: relative;
+                min-height: 100vh;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                padding: 150px 0;
+            }
+            
+            .card {
+                border: none;
+                -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
+                box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
+                margin-bottom: 20px;
+            }
+            
+            .wrapper-page {
+                margin: 0 auto;
+                max-width: 460px;
+                position: relative;
+                width: 100%;
+                .logo-admin {
+                    line-height: 70px;
+                    max-width: 120px;
+                    display: block;
+                }
+                .card {
+                    box-shadow: 1px 4px 45px 0 rgba(0, 0, 0, 0.1);
+                }
+                P {
+                    color: $dark;
+                }
+                .form-control {
+                    border-color: $theme-color;
+                    &:hover,
+                    &:focus {
+                        border-color: $dark;
+                    }
+                }
+                .custom-control-label:after,
+                .custom-control-label:before {
+                    position: absolute;
+                    top: 0.15rem;
+                }
+                .custom-control-input:checked~.custom-control-label:before {
+                    border-color: $theme-color;
+                    background-color: $theme-color;
+                }
+            }
+            
+            .form-control.is-invalid,
+            .was-validated .form-control:invalid {
+                border-color: #dc3545 !important;
+            }
+            
+            .home-btn {
+                position: absolute;
+                top: 0px;
+                right: 25px;
+                a {
+                    font-size: 45px;
+                    line-height: 45px;
+                }
+            }
+            
+            .submit-btn {
+                &:hover,
+                &:focus {
+                    background-color: $theme-color;
+                    border-color: $theme-color;
+                    color: $white;
+                }
+            }
+            
+            .mt--6 {
+                margin-top: -6px;
+            }

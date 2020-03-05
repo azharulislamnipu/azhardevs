@@ -1,0 +1,209 @@
+.portfolios-area {
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+    background: #A1FFCE;
+    background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);
+    background: linear-gradient(to right, #FAFFD1, #A1FFCE);
+}
+
+.grrider {
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    .slick-arrow.slick-prev {
+        @media #{$lg-layout} {
+            right: 7% !important;
+        }
+        @media #{$md-layout} {
+            right: 10% !important;
+        }
+        @media #{$sm-layout} {
+            right: 8% !important;
+        }
+        @media #{$xss-layout} {
+            right: 15% !important;
+        }
+    }
+}
+
+.gridderGallery {
+    -webkit-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+    &:hover {
+        -webkit-transition: all 1s ease 0s;
+        -o-transition: all 1s ease 0s;
+        transition: all 1s ease 0s;
+        .slick-arrow.slick-prev {
+            opacity: 1 !important;
+            -webkit-transition: all 1s ease 0s;
+            -o-transition: all 1s ease 0s;
+            transition: all 1s ease 0s;
+        }
+        .slick-arrow.slick-next {
+            opacity: 1 !important;
+            -webkit-transition: all 1s ease 0s;
+            -o-transition: all 1s ease 0s;
+            transition: all 1s ease 0s;
+        }
+    }
+}
+
+.slick-arrow.slick-prev {
+    -webkit-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(65, 34, 142, .9);
+        transition: all .3s ease 0s
+    }
+    &.dark-1:before {
+        background: #A1FFCE;
+        background: -webkit-linear-gradient(to right, #faffd1ba, #a1ffcec9);
+        background: linear-gradient(to right, #faffd1ba, #a1ffcec9);
+    }
+}
+
+.gridder-content {
+    padding: 128px 0;
+    @media #{$lg-layout} {
+        padding: 50px 0;
+    }
+    @media #{$xs-layout,$md-layout} {
+        padding: 100px 0;
+    }
+}
+
+.single-portfolio {
+    &.overlay {
+        &::before {
+            opacity: 0;
+            -webkit-transition: all .5s ease 0s;
+            -o-transition: all .5s ease 0s;
+            transition: all .5s ease 0s;
+            -webkit-transform: scaleX(1.2);
+            -ms-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+        }
+        &:hover::before {
+            opacity: 1;
+            -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+    }
+}
+
+.project-title {
+    bottom: 35px;
+    left: 35px;
+    position: absolute;
+    z-index: 2;
+    h3 {
+        font-weight: 700
+    }
+    h3,
+    h6 {
+        opacity: 0;
+        position: relative;
+        top: 20px;
+        transition: all .3s ease 0s
+    }
+    h6 {
+        line-height: 24px;
+        margin-bottom: 0;
+        -webkit-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s
+    }
+}
+
+.small .project-title {
+    bottom: 20px;
+    left: 30px
+}
+
+.single-portfolio {
+    &:hover {
+        .project-title h6 {
+            -webkit-transition-delay: .2s;
+            -o-transition-delay: .2s;
+            transition-delay: .2s
+        }
+        .project-title h3,
+        .project-title h6 {
+            opacity: 1;
+            top: 0
+        }
+        .icon a {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1)
+        }
+    }
+    .icon a {
+        color: $white;
+        display: block;
+        font-size: 40px;
+        opacity: 0;
+        position: absolute;
+        right: 60px;
+        bottom: 65px;
+        -webkit-transform: scale(.5);
+        -ms-transform: scale(.5);
+        transform: scale(.5);
+        -webkit-transition: all .4s ease 0s;
+        -o-transition: all .4s ease 0s;
+        transition: all .4s ease 0s
+    }
+}
+
+.hover-style2 {
+    .project-title {
+        bottom: 50%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-bottom: -30px;
+    }
+    .single-portfolio {
+        cursor: pointer
+    }
+    .project-title h3 {
+        font-size: 24px
+    }
+}
+
+.project-details {
+    h2 {
+        color: #fff;
+    }
+    p {
+        color: #fff;
+    }
+    @media #{$xss-layout} {
+        text-align: center;
+    }
+}
+
+.project-info {
+    h5 {
+        color: #fff;
+    }
+    p {
+        color: rgb(13, 231, 245);
+    }
+}
